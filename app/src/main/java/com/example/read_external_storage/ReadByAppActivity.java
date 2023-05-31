@@ -52,7 +52,7 @@ public class ReadByAppActivity extends AppCompatActivity {
                 char[] buf = new char[256];
                 while (true) {
                     int count = reader.read(buf);
-                    if (count < 1) {
+                    if (count < 0) {
                         break;
                     }
                     builder.append(buf, 0, count);
